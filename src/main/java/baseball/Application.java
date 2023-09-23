@@ -26,6 +26,7 @@ public class Application {
             //결과
             checkStrikeAndBall(answer, userAnswer);
             printResult(returnList);
+
         }
 
         }
@@ -107,5 +108,11 @@ public class Application {
             result = checkStrikeAndBallResultPrint(ball, strike);
         }
         System.out.println(result);
+    }
+
+    public static boolean checkAnswer(String answer, String userAnswer){//map의 strike가 3인가로도 할 수 있다.
+        if(answer.equals(userAnswer))
+            return true;
+        return false;
     }
 }
