@@ -115,4 +115,12 @@ public class Application {
             return true;
         return false;
     }
+
+    public static String getStringNumFromList(List<String> answer){
+        String returnValue = "";
+        for(String num : answer){
+            returnValue += num;
+        }
+        return returnValue;
+    }
 }
