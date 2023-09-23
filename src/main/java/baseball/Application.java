@@ -19,6 +19,9 @@ public class Application {
         while(checkOnGoing.equals("1")){
             //초기화
             initReturnList();
+
+            //입력
+            String userAnswer = enterNum();
         }
 
         }
@@ -30,9 +33,14 @@ public class Application {
         }
         return answer;
     }
-    
+
     public static void initReturnList(){
         returnList.put("strike", 0);
         returnList.put("ball", 0);
+    }
+
+    public static String enterNum(){
+        System.out.println("숫자를 입력해주세요 : ");
+        return Console.readLine();
     }
 }
