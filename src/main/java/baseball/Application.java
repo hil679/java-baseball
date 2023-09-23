@@ -66,7 +66,15 @@ public class Application {
         }
         return false;
     }
+
     public static void plusStrike (){
         returnList.put("strike", returnList.get("strike") + 1);
+    }
+
+    public static boolean checkBall (List<String> answer, String userAnswerOneString){
+        if(answer.contains(userAnswerOneString)){
+            return true;
+        }
+        return false;
     }
 }
