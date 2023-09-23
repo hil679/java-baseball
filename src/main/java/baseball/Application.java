@@ -25,6 +25,7 @@ public class Application {
 
             //결과
             checkStrikeAndBall(answer, userAnswer);
+            printResult(returnList);
         }
 
         }
@@ -80,5 +81,18 @@ public class Application {
 
     public static void plusBall (){
         returnList.put("ball", returnList.get("ball") + 1);
+    }
+
+    public static String checkStrikeAndBallResultPrint(int ball, int strike){
+        String result = "";
+
+        if (ball != 0) {
+            result += ball + "볼 ";
+        }
+        if (strike != 0) {
+            result += strike + "스트라이크";
+        }
+
+        return result;
     }
 }
