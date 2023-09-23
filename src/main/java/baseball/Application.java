@@ -22,6 +22,8 @@ public class Application {
 
             //입력
             String userAnswer = enterNum();
+            //checkValidPatternInput
+            checkInvalidInputException(userAnswer);
 
             //결과
             checkStrikeAndBall(answer, userAnswer);
@@ -134,6 +136,12 @@ public class Application {
 
     public static void checkInvalidOnGoingDecisionInputException(String onGoingDecision){
         if(!onGoingDecision.equals("1") && !onGoingDecision.equals("2")){
+            throw new IllegalArgumentException();
+        }
+    }
+
+    public static void checkInvalidInputException(String userAnswer){
+        if(userAnswer.length() != 3 || !userAnswer.matches("[1-9]+")){
             throw new IllegalArgumentException();
         }
     }
