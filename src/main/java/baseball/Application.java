@@ -77,4 +77,8 @@ public class Application {
         }
         return false;
     }
+
+    public static void plusBall (){
+        returnList.put("ball", returnList.get("ball") + 1);
+    }
 }
