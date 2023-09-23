@@ -14,9 +14,14 @@ public class Application {
         // TODO: 프로그램 구현
 
         List<String> answer = getRandomAnswer();
+        System.out.println("숫자 야구 게임을 시작합니다.");
+        String checkOnGoing = "1";
+        while(checkOnGoing.equals("1")){
+            //초기화
+            initReturnList();
+        }
 
-
-    }
+        }
 
     public static List<String> getRandomAnswer(){
         List<String> answer = new ArrayList<>();
@@ -25,5 +30,9 @@ public class Application {
         }
         return answer;
     }
-
+    
+    public static void initReturnList(){
+        returnList.put("strike", 0);
+        returnList.put("ball", 0);
+    }
 }
