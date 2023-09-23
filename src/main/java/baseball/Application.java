@@ -95,4 +95,17 @@ public class Application {
 
         return result;
     }
+
+    public static void printResult(Map<String, Integer> returnList){
+        String result = "";
+        int ball = returnList.get("ball");
+        int strike = returnList.get("strike");
+        if(strike == 0 && ball == 0){
+            result = "낫싱";
+        }
+        else {
+            result = checkStrikeAndBallResultPrint(ball, strike);
+        }
+        System.out.println(result);
+    }
 }
