@@ -22,6 +22,9 @@ public class Application {
 
             //입력
             String userAnswer = enterNum();
+
+            //결과
+            checkStrikeAndBall(answer, userAnswer);
         }
 
         }
@@ -42,5 +45,25 @@ public class Application {
     public static String enterNum(){
         System.out.println("숫자를 입력해주세요 : ");
         return Console.readLine();
+    }
+
+    public static void checkStrikeAndBall (List<String> answer, String userAnswer){
+
+        for(int i = 0; i < userAnswer.length(); i++){
+            String compareAnswerNumIndex = answer.get(i);
+            String userAnswerOneString = userAnswer.substring(i, i+1);
+            if(checkStrike(compareAnswerNumIndex, userAnswerOneString)){
+                plusStrike();
+            }else if(checkBall(answer, userAnswerOneString)){
+                plusBall();
+            }
+        }
+    }
+
+    public static boolean checkStrike (String compareAnswerNumIndex, String userAnswerOneString){
+        if(compareAnswerNumIndex.equals(userAnswerOneString)){
+            return true;
+        }
+        return false;
     }
 }
