@@ -66,4 +66,7 @@ public class Application {
         }
         return false;
     }
+    public static void plusStrike (){
+        returnList.put("strike", returnList.get("strike") + 1);
+    }
 }
